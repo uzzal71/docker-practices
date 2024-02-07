@@ -1,10 +1,6 @@
 # Test web app that returns the name of the host/pod/container servicing req
 FROM node:current-alpine
 
-LABEL org.opencontainers.image.title="Hello Docker Learners!" \
-      org.opencontainers.image.description="Web server showing host that responded" \
-      org.opencontainers.image.authors="@uzzal71"
-
 # Create directory in container image for app code
 RUN mkdir -p /usr/src/app
 
