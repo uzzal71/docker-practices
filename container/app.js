@@ -11,6 +11,10 @@ app.get("/api", (req, res) => {
   res.send("Welcome to api page");
 });
 
+app.get("/users", (req, res) => {
+  res.send("Welcome to api page");
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
 });
