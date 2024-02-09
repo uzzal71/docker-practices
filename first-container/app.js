@@ -4,13 +4,13 @@ var app = express();
 var os = require("os");
 var morgan  = require('morgan');
 
-app.engine('handlebars', exphbs.engine({defaultLayout: 'main'}));
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.use(express.static('static'));
 app.use(morgan('combined'));
 
 var port = process.env.PORT || 8080;
-var message = process.env.MESSAGE || "WebAssembly is the future!";
+var message = process.env.MESSAGE || "Have a blast learning Docker!";
 
 app.get('/', function (req, res) {
     res.render('home', {
